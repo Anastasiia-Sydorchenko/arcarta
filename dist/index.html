@@ -34,13 +34,16 @@
 <body>
 
    <div class="container">
+
+      <!-- HEADER -->
       <header class="row flex-row align-items-center justify-content-between">
 
-         <div class="logo col col-lg-2">
+         <div class="logo col col-xl-2">
             <img src="../images/dist/logo.png" alt="logo">
          </div>
 
-         <div class="col d-none d-lg-block">
+        <!-- MAIN MENU --> 
+         <div class="col d-none d-xl-block">
             <ul class="header_menu d-flex justify-content-end">
                <li><a href="#">What is arcarta?</a></li>
                <li><a href="#">Solutions</a></li>
@@ -51,27 +54,35 @@
              </ul>
          </div>
 
-         <div class="button-container d-flex col col-lg-2">
+         <div class="button-container d-flex col col-xl-2">
             <button class="btn-top">Get Started</button>
          </div>
 
-         <div class="header_menu__mobile-wrapper col d-block d-lg-none">
-            <ul class="header_menu__mobile">
+         <!-- MOBILE MENU -->
+         <div class="header__burger d-block d-xl-none">
+            <span></span>
+         </div>
+         <nav class="header__menu text-center d-xl-none">
+            <ul class="header__list">
                <li><a href="#">What is arcarta?</a></li>
                <li><a href="#">Solutions</a></li>
                <li><a href="#">Resources</a></li>
                <li><a href="#">FAQs</a></li>
                <li><a href="#">Contact</a></li>
                <li><a href="#">Login</a></li>
-             </ul>
-         </div>
+            </ul>
+         </nav>
 
       </header>
    </div>
 
 
 
-	<script src="js/app.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+   integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+   crossorigin="anonymous"></script>
+
+   <script src="js/app.min.js"></script>
 
 </body>
 </html>
