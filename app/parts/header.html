@@ -6,10 +6,6 @@
    <meta charset="utf-8">
    <!-- <base href="/"> -->
 
-   <!-- Bootstrap CSS -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
    <title>
       <!--#echo var="title" -->
    </title>
@@ -55,20 +51,7 @@
             <button class="btn-top">Get Started</button>
          </div>
 
-         <!-- MOBILE MENU -->
-         <div class="header__burger d-block d-xl-none">
-            <span></span>
-         </div>
-         <nav class="header__menu text-center d-xl-none">
-            <ul class="header__list">
-               <li><a href="#">What is arcarta?</a></li>
-               <li><a href="#">Solutions</a></li>
-               <li><a href="#">Resources</a></li>
-               <li><a href="#">FAQs</a></li>
-               <li><a href="#">Contact</a></li>
-               <li><a href="#">Login</a></li>
-            </ul>
-         </nav>
+         <!--#include virtual="/parts/burger_menu.html" -->
 
       </header>
    </div>

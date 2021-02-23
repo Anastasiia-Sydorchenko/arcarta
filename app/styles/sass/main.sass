@@ -81,25 +81,6 @@ header
       color: #c47344
       transition: .35s
 
-// MOBILE MENU 
-.header__menu
-   .header__list
-      padding: 0
-
-      li
-         list-style-type: none
-         margin-bottom: 2em
-
-         a
-            text-decoration: none
-            color: #000000
-            text-transform: uppercase
-            font-size: 25px
-
-            &:hover
-               color: #c47344
-               transition: .35s
-
 
 // MEDIA QUERIES 
 // less than 480px
@@ -125,10 +106,7 @@ header
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) 
-   header
-      position: relative
-
-      .header_menu
+   .header_menu
          a
             margin-left: 1.5em
 
@@ -136,76 +114,6 @@ header
       .btn-top
          padding: .5em 1.5em
          margin-right: 4em
-
-   // MOBILE MENU
-   body.lock
-      overflow: hidden
-
-   .header__burger
-      position: absolute
-      width: 35px
-      height: 20px
-      z-index: 2
-      top: 3rem
-      right: 0
-
-      span 
-         position: absolute
-         background-color: #000000
-         left: 0
-         width: 100%
-         height: 3px
-         top: 8px
-         transition: all .3s ease 0s
-
-      &::before,
-      &::after
-         content: ''
-         background-color: #000000
-         position: absolute
-         width: 100%
-         height: 3px
-         left: 0
-         transition: all .5s ease 0s
-
-      &::before
-         top: 0
-
-      &::after
-         bottom: 0
-
-   .active
-      &::before
-         transform: rotate(45deg)
-         top: 8px
-         background-color: #000000
-
-      &::after
-         transform: rotate(-45deg)
-         bottom: 8px
-         background-color: #000000
-
-      span
-         transform: scale(0)
-
-   .header__menu
-      position: fixed
-      overflow: auto
-      top: -200%
-      left: 0
-      width: 100%
-      height: 100%
-      transition: all .5s ease 0s
-      background-color: #ffffff
-
-   .header__menu.active
-      top: 0
-      display: flex
-      align-items: center
-      justify-content: center
-
-   .header__list
-      display: block
 
 // X-Large devices (large desktops, less than 1400px)
 //@media (max-width: 1399.98px)
