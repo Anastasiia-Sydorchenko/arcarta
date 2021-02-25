@@ -9,6 +9,8 @@ html
 // HEADER 
 header
    padding-top: 2.5rem
+   position: sticky
+   top: 0
 
    ul
       margin-bottom: 0
@@ -27,7 +29,7 @@ header
 
       a
          padding: 0.3em 0
-         color: #000000
+         color: $primaryColorBlack
          position: relative
          text-decoration: none
          display: inline-block
@@ -43,7 +45,7 @@ header
             content: ''
             -webkit-transition: all 0.35s ease
             transition: all 0.35s ease
-            background-color: #c47344
+            background-color: $primaryColorOrange
             width: 0
 
          &::before
@@ -55,7 +57,7 @@ header
             right: 0
 
          &:hover
-            color: #c47344
+            color: $primaryColorOrange
 
          &:hover::before,
          .current a:before,
@@ -63,30 +65,105 @@ header
          .current a:after
             width: 100%
 
-.button-container
-   justify-content: flex-end
+// TOP SECTION 
+.top-section
+   padding-top: 9rem
 
-.btn-top
-   color: #ffffff
-   font-weight: 700
-   font-size: 14px
-   border: 2px solid #c47344
-   border-radius: 30px
-   background-color: #c47344
-   padding: 1em 2em
+   .label
+      font-weight: 700
+      font-size: 12px
 
-   &:hover
-      border: 2px solid #c47344
-      background-color: #ffffff
-      color: #c47344
-      transition: .35s
+      .new
+         background-color: $secondaryColor
+         color: $primaryColorWhite
+         padding: .5em 1em
+         border-radius: 20px
+         width: auto
 
+      .report
+         background-color: #f9ede2
+         color: $primaryColorBlack
+         padding: .5em 1.8em .5em 2.8em
+         border-radius: 20px
+         margin-left: -.7em
+         width: auto
 
-// MEDIA QUERIES 
-// less than 480px
-// @media (max-width: 479.98px)
+   .title
+      h1
+         font-size: calc(55px + 55 * ((100vw - 320px) / (1440 - 320)))
+         font-weight: 700
 
-// X-Small devices (portrait phones, less than 576px)
+   .subtitle
+       width: 40%
+       text-align: center  
+       font-weight: 500
+       font-size: calc(14px + 7 * ((100vw - 320px) / (1440 - 320)))
+       padding: .5em 0 1em 0  
+
+   .clients
+      margin: 2rem 0 1rem 0
+
+   .about_external
+      a
+         color: $primaryColorOrange
+         font-weight: 700
+         font-size: 16px
+         text-decoration: none
+         padding: .5em 1em
+         border: 2px solid transparent
+         border-radius: 20px
+
+         &:hover
+            border: 2px solid $primaryColorOrange
+            transition: .5s
+         
+         i 
+            font-size: 20px
+            padding-left: .3em
+   
+   // MEDIA QUERIES 
+
+@media (min-width: 1440px)
+   .container
+      max-width: 1330px
+
+//@media (max-width: 1399.98px)
+
+@media (max-width: 1199.98px) 
+   .header_menu
+         a
+            margin-left: 1.5em
+
+   .button-container
+      .btn-top
+         margin-right: 4em
+      
+   .clients
+      .clients-item
+         width: 96%;
+         max-width: 960px;
+         margin: 0 auto; 
+
+         img 
+            width: 100%;
+            height: auto;
+
+@media (max-width: 991.98px)
+   .top-section
+      .subtitle
+         width: 60%
+
+@media (max-width: 767.98px)
+   .top-section
+      .title
+         margin: 1em 0
+
+      .subtitle
+         width: 70%
+
+      .button-container
+         padding-top: 1.5em
+
 @media (max-width: 575.98px)
    .container
       width: 90%
@@ -98,27 +175,8 @@ header
          .btn-top 
             display: none
 
-// Small devices (landscape phones, less than 768px)
-//@media (max-width: 767.98px)
+   .top-section
+      .subtitle
+         width: 90%
 
-// Medium devices (tablets, less than 992px)
-//@media (max-width: 991.98px)
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) 
-   .header_menu
-         a
-            margin-left: 1.5em
-
-   .button-container
-      .btn-top
-         padding: .5em 1.5em
-         margin-right: 4em
-
-// X-Large devices (large desktops, less than 1400px)
-//@media (max-width: 1399.98px)
-
-// XX-Large devices (larger desktops)
-@media (min-width: 1440px)
-   .container
-      max-width: 1330px
+// @media (max-width: 479.98px)
