@@ -5,6 +5,8 @@
 
 html
    font-family: 'Roboto', sans-serif
+
+body 
    background-color: #fff8ee
 
 // HEADER 
@@ -12,6 +14,8 @@ header
    padding-top: 2.5rem
    position: sticky
    top: 0
+   position: relative
+   z-index: 3
 
    ul
       margin-bottom: 0
@@ -69,6 +73,8 @@ header
 // TOP SECTION 
 .top-section
    padding-top: 9rem
+   position: relative
+   z-index: 2
 
    .label
       font-weight: 700
@@ -95,23 +101,23 @@ header
          font-weight: 700
 
    .subtitle
-       width: 40%
-       text-align: center  
-       font-weight: 500
-       font-size: calc(14px + 7 * ((100vw - 320px) / (1440 - 320)))
-       padding: .5em 0 1em 0  
+      width: 40%
+      text-align: center
+      font-weight: 500
+      font-size: calc(14px + 7 * ((100vw - 320px) / (1440 - 320)))
+      padding: .5em 0 1em 0
 
    .clients
       margin: 2rem 0 1rem 0
+
       .clients-item
-         width: 96%;
-         max-width: 960px;
-         margin: 0 auto; 
+         width: 96%
+         max-width: 960px
+         margin: 0 auto
 
-         img 
-            width: 100%;
-            height: auto;
-
+         img
+            width: 100%
+            height: auto
 
    .about_external
       a
@@ -126,12 +132,21 @@ header
          &:hover
             border: 2px solid $primaryColorOrange
             transition: .5s
-         
-         i 
+
+         i
             font-size: 20px
             padding-left: .3em
-   
+
    // MEDIA QUERIES 
+
+// GALLERY SECTION IMG 
+.gallery_img
+   width: 100%
+   height: 40rem
+   background-image: url('../images/dist/main-img_gallery.png')
+   background-repeat: no-repeat
+   background-position: left
+   margin: 5rem 0
 
 @media (min-width: 1440px)
    .container
@@ -139,10 +154,10 @@ header
 
 //@media (max-width: 1399.98px)
 
-@media (max-width: 1199.98px) 
+@media (max-width: 1199.98px)
    .header_menu
-         a
-            margin-left: 1.5em
+      a
+         margin-left: 1.5em
 
    .button-container
       .btn-top
@@ -172,11 +187,13 @@ header
 
    header
       .button-container
-         .btn-top 
+         .btn-top
             display: none
 
    .top-section
       .subtitle
          width: 90%
 
+   .gallery_img 
+      display: none
 // @media (max-width: 479.98px)
