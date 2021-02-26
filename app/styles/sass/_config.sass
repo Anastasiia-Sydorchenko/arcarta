@@ -14,7 +14,7 @@ $secondaryColor: #f9a38f
    padding: .5em 1em
    border-radius: 20px
    font-weight: 700
-   font-size: 12px
+   font-size: calc(11px + 1 * ((100vw - 320px) / (1440 - 320)))
 
 // BUTTONS
 .button-container
@@ -23,7 +23,7 @@ $secondaryColor: #f9a38f
 .btn
    color: $primaryColorWhite
    font-weight: 700
-   font-size: 14px
+   font-size: calc(11px + 3 * ((100vw - 320px) / (1440 - 320)))
    border: 2px solid $primaryColorOrange
    border-radius: 30px
    background-color: $primaryColorOrange
@@ -34,8 +34,6 @@ $secondaryColor: #f9a38f
       background-color: $primaryColorWhite
       color: $primaryColorOrange
       transition: .35s
-
-
 
 // MEDIA QUERIES
 @media (max-width: 1199.98px) 
