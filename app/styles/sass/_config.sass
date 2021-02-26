@@ -8,6 +8,15 @@ $secondaryColor: #f9a38f
 @import "node_modules/bootstrap/scss/bootstrap"; //add Bootstrap (full)
 
 // GENERAL DOCUMENT STYLES
+.new_element
+   background-color: $secondaryColor
+   color: $primaryColorWhite
+   padding: .5em 1em
+   border-radius: 20px
+   font-weight: 700
+   font-size: 12px
+
+// BUTTONS
 .button-container
    justify-content: flex-end
 
@@ -26,7 +35,9 @@ $secondaryColor: #f9a38f
       color: $primaryColorOrange
       transition: .35s
 
-// Large devices (desktops, less than 1200px)
+
+
+// MEDIA QUERIES
 @media (max-width: 1199.98px) 
    .button-container
       .btn
