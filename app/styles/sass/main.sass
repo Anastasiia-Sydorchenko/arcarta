@@ -8,71 +8,72 @@ body
    font-family: 'Roboto', sans-serif
    background-color: #fff8ee
 
-// HEADER 
-header
-   padding-top: 2rem
-   position: relative
-   z-index: 3
-
-   ul
-      margin-bottom: 0
-      list-style-type: none
-
-   .header_menu *
-      -webkit-box-sizing: border-box
-      box-sizing: border-box
-      @include transition
-
-      li
-         display: inline-block
-         margin: 0.5em 1.5em
-         padding: 0
-
-      a
-         padding: 0.3em 0
-         color: $primaryColorBlack
-         position: relative
-         text-decoration: none
-         display: inline-block
-
-         font-size: calc(12px + 3 * ((100vw - 320px) / (1440 - 320)))
-         font-weight: 700
-         margin-left: 4.5rem
-
-         &::before,
-         &::after
-            height: 2px
-            position: absolute
-            content: ''
-            background-color: $primaryColorOrange
-            width: 0
-            @include transition
-
-         &::before
-            top: 0
-            left: 0
-
-         &::after
-            bottom: 0
-            right: 0
-
-         &:hover
-            color: $primaryColorOrange
-
-         &:hover::before,
-         .current a:before,
-         &:hover::after,
-         .current a:after
-            width: 100%
-
 // TOP SECTION
 .top-section
    height: 100vh
 
+   // HEADER 
+   header
+      padding-top: 2rem
+      position: relative
+      z-index: 3
+      height: 10vh
+
+      ul
+         margin-bottom: 0
+         list-style-type: none
+
+      .header_menu *
+         -webkit-box-sizing: border-box
+         box-sizing: border-box
+         @include transition
+
+         li
+            display: inline-block
+            margin: 0.5em 1.5em
+            padding: 0
+
+         a
+            padding: 0.3em 0
+            color: $primaryColorBlack
+            position: relative
+            text-decoration: none
+            display: inline-block
+
+            font-size: calc(12px + 3 * ((100vw - 320px) / (1440 - 320)))
+            font-weight: 700
+            margin-left: 4.5rem
+
+            &::before,
+            &::after
+               height: 2px
+               position: absolute
+               content: ''
+               background-color: $primaryColorOrange
+               width: 0
+               @include transition
+
+            &::before
+               top: 0
+               left: 0
+
+            &::after
+               bottom: 0
+               right: 0
+
+            &:hover
+               color: $primaryColorOrange
+
+            &:hover::before,
+            .current a:before,
+            &:hover::after,
+            .current a:after
+               width: 100%
+
    .top-content
       position: relative
+      height: 90vh
       z-index: 2
-      height: 95%;
       justify-content: center;
 
       .label
@@ -137,8 +138,8 @@ header
 // GALLERY SECTION IMG 
 .gallery_img
    width: 100%
-   margin: 15rem 0
-
+   margin: 7rem 0;
+   
    img
       width: 100%
 
@@ -209,7 +210,7 @@ header
 .quiz
    display: flex
    justify-content: center
-   margin: 20rem 0
+   margin: 15rem 0
 
    .quiz_begin
       background-color: #32686F
@@ -295,7 +296,7 @@ header
    display: flex
    justify-content: center
    align-items: center
-   margin-bottom: 23rem
+   margin-bottom: 20rem
 
    .newsletter_img_container
       width: 35rem
@@ -431,7 +432,7 @@ footer
       .footer-bottom_socials
          display: flex
          align-items: center
-         padding-bottom: 2rem
+         padding-bottom: 5rem
 
          .privacy
             a
@@ -457,11 +458,9 @@ footer
 //
 //
 //MEDIA QUERIES   
-@media (min-width: 1440px)
+@media (min-width: 1399.98px)
    .container
       max-width: 1330px
-
-//@media (max-width: 1399.98px)
 
 @media (max-width: 1199.98px)
    .header_menu
@@ -636,8 +635,18 @@ footer
                width: 25rem
 
    footer
+      .footer-top
+         .footer_info
+            .partners
+               flex-direction: column
       .footer-bottom
          justify-content: center
+
+         .footer-bottom_socials
+            flex-direction: row
+
+            .icons
+               padding: 0
 
          .footer-bottom_img-container
             display: none
