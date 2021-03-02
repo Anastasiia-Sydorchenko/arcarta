@@ -6,46 +6,74 @@
 <div class="container">
 
    <!-- TOP SECTION -->
-   <div class="top-section d-flex flex-column align-items-center">
-      <div class="row label">
-         <div class="new_element">New</div>
-         <button class="report">The Art Market Report</button>
-      </div>
+   <div class="top-section">
+      <header class="row flex-row align-items-baseline justify-content-between">
 
-      <div class="row title">
-         <h1>Rely on us</h1>
-      </div>
-
-      <div class="row subtitle">
-         <span>Our Customer Due Diligence platform helps you avoid fines or losing clients due to AML while protecting
-            you from cybercrime.</span>
-      </div>
-
-      <div class="row button-container">
-         <button class="btn btn_orange">Learn More</button>
-      </div>
-
-      <div class="row clients">
-         <div class="col-6 col-md-3 clients-item">
-            <img src="./images/dist/client-1.png" alt="Colnaghi">
+         <div class="logo col col-xl-2">
+            <img src="./images/dist/logo.png" alt="Arcarta logo">
          </div>
-         <div class="col-6 col-md-3 clients-item">
-            <img src="./images/dist/client-2.png" alt="Luxembourg + Co">
+   
+        <!-- MAIN MENU --> 
+         <div class="col d-none d-xl-block">
+            <ul class="header_menu d-flex justify-content-end">
+               <li><a href="#">What is arcarta?</a></li>
+               <li><a href="#">Solutions</a></li>
+               <li><a href="#">Resources</a></li>
+               <li><a href="#">FAQs</a></li>
+               <li><a href="#">Contact</a></li>
+               <li><a href="#">Login</a></li>
+             </ul>
          </div>
-         <div class="col-6 col-md-3 clients-item">
-            <img src="./images/dist/client-3.png" alt="Tomasso Brothers Fine Art">
+   
+         <div class="button-container d-flex col col-xl-2">
+            <button class="btn btn-top">Get Started</button>
          </div>
-         <div class="col-6 col-md-3 clients-item">
-            <img src="./images/dist/client-4.png" alt="Criestea Roberts GAllery">
+   
+         <!--#include virtual="/parts/burger_menu.html" -->
+   
+      </header>
+   
+      <div class="top-content d-flex flex-column align-items-center">
+         <div class="row label">
+            <div class="new_element">New</div>
+            <button class="report">The Art Market Report</button>
          </div>
-      </div>
-
-      <div class="row about_external">
-         <a href="#">What is arcarta?<i class="fas fa-arrow-circle-right"></i></a>
+   
+         <div class="row title">
+            <h1>Rely on us</h1>
+         </div>
+   
+         <div class="row subtitle">
+            <span>Our Customer Due Diligence platform helps you avoid fines or losing clients due to AML while protecting
+               you from cybercrime.</span>
+         </div>
+   
+         <div class="row button-container">
+            <button class="btn btn_orange">Learn More</button>
+         </div>
+   
+         <div class="row clients">
+            <div class="col-6 col-md-3 clients-item">
+               <img src="./images/dist/client-1.png" alt="Colnaghi">
+            </div>
+            <div class="col-6 col-md-3 clients-item">
+               <img src="./images/dist/client-2.png" alt="Luxembourg + Co">
+            </div>
+            <div class="col-6 col-md-3 clients-item">
+               <img src="./images/dist/client-3.png" alt="Tomasso Brothers Fine Art">
+            </div>
+            <div class="col-6 col-md-3 clients-item">
+               <img src="./images/dist/client-4.png" alt="Criestea Roberts GAllery">
+            </div>
+         </div>
+   
+         <div class="row about_external">
+            <a href="#">What is arcarta?<i class="fas fa-arrow-circle-right"></i></a>
+         </div>
       </div>
    </div>
 
-   <!-- GALLERY SECTION IMG -->
+   <!-- GALLERY SECTION -->
    <div class="gallery_img">
       <img class="d-none d-md-block" src="./images/dist/main-img_gallery.png" alt="art gallery">
    </div>
@@ -187,6 +215,7 @@
       </div>
 
    </div>
+
 </div>
 
 <!--#include virtual="/parts/footer.html" -->

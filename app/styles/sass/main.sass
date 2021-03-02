@@ -10,7 +10,7 @@ body
 
 // HEADER 
 header
-   padding-top: 3.5rem
+   padding-top: 2rem
    position: relative
    z-index: 3
 
@@ -65,68 +65,72 @@ header
          .current a:after
             width: 100%
 
-// TOP SECTION 
+// TOP SECTION
 .top-section
-   padding-top: 17rem
-   position: relative
-   z-index: 2
+   height: 100vh
 
-   .label
-      .report
-         background-color: #f9ede2
-         font-weight: 700
-         border: none
-         color: $primaryColorBlack
-         padding: .5em 1.8em .5em 2.8em
-         border-radius: 20px
-         margin-left: -.7em
-         font-size: calc(12px + 1 * ((100vw - 320px) / (1440 - 320)))
-         width: auto;
+   .top-content
+      position: relative
+      z-index: 2
+      height: 95%;
+      justify-content: center;
 
-         &:hover
-            background-color: #f0dfd0
-            @include transition
+      .label
+         .report
+            background-color: #f9ede2
+            font-weight: 700
+            border: none
+            color: $primaryColorBlack
+            padding: .5em 1.8em .5em 2.8em
+            border-radius: 20px
+            margin-left: -.7em
+            font-size: calc(12px + 1 * ((100vw - 320px) / (1440 - 320)))
+            width: auto;
 
-   .title
-      h1
-         font-size: calc(55px + 55 * ((100vw - 320px) / (1440 - 320)))
-         font-weight: 700
+            &:hover
+               background-color: #f0dfd0
+               @include transition
 
-   .subtitle
-      width: 40%
-      text-align: center
-      font-weight: 500
-      font-size: calc(14px + 7 * ((100vw - 320px) / (1440 - 320)))
-      padding: 1em 0
+      .title
+         h1
+            font-size: calc(55px + 55 * ((100vw - 320px) / (1440 - 320)))
+            font-weight: 700
 
-   .clients
-      margin: 2rem 0 1rem 0
+      .subtitle
+         width: 40%
+         text-align: center
+         font-weight: 500
+         font-size: calc(14px + 7 * ((100vw - 320px) / (1440 - 320)))
+         padding: 1em 0
 
-      .clients-item
-         max-width: 960px
-         margin: 0 auto
+      .clients
+         margin: 2rem 0 1rem 0
 
-         img
-            width: 100%
-            height: auto
+         .clients-item
+            max-width: 960px
+            margin: 0 auto
 
-   .about_external
-      a
-         color: $primaryColorOrange
-         font-weight: 700
-         font-size: calc(12px + 4 * ((100vw - 320px) / (1440 - 320)))
-         text-decoration: none
-         padding: .5em 1em
-         border: 2px solid transparent
-         border-radius: 20px
+            img
+               width: 100%
+               height: auto
 
-         &:hover
-            border: 2px solid $primaryColorOrange
-            @include transition
+      .about_external
+         a
+            color: $primaryColorOrange
+            font-weight: 700
+            font-size: calc(12px + 4 * ((100vw - 320px) / (1440 - 320)))
+            text-decoration: none
+            padding: .5em 1em
+            border: 2px solid transparent
+            border-radius: 20px
 
-         i
-            font-size: calc(11px + 9 * ((100vw - 320px) / (1440 - 320)))
-            padding-left: .3em
+            &:hover
+               border: 2px solid $primaryColorOrange
+               @include transition
+
+            i
+               font-size: calc(11px + 9 * ((100vw - 320px) / (1440 - 320)))
+               padding-left: .3em
 
    // MEDIA QUERIES 
 
@@ -473,7 +477,7 @@ footer
             width: 65%
 
 @media (max-width: 991.98px)
-   .top-section
+   .top-content
       .subtitle
          width: 60%
 
@@ -498,14 +502,12 @@ footer
 
 @media (max-width: 767.98px)
    .top-section
-      .title
-         margin: 1em 0
+      .top-content
+         .title
+            margin: 1em 0
 
-      .subtitle
-         width: 70%
-
-      .button-container
-         padding-top: 1.5em
+         .subtitle
+            width: 70%
 
    .services
       .flex_container-1,
@@ -576,6 +578,7 @@ footer
       .footer_copyright
          width: 100%
          text-align: center
+
 @media (max-width: 575.98px)
    .container
       width: 90%
@@ -587,7 +590,7 @@ footer
          .btn-top
             display: none
 
-   .top-section
+   .top-content
       .subtitle
          width: 90%
 
