@@ -364,14 +364,14 @@ footer
          width: 25%
 
          .text
-            font-size: calc(11px + 2 * ((100vw - 320px) / (1440 - 320)))
-            padding-top: 1.5rem
+            font-size: calc(13px + 1 * ((100vw - 320px) / (1440 - 320)))
+            padding-top: 2em
 
          .partners
             .partner_name
-               font-size: calc(11px + 2 * ((100vw - 320px) / (1440 - 320)))
+               font-size: 13px
                font-weight: 500
-               padding: 3rem 0 2rem 0
+               padding: 2.5em 0 2em 0
 
       .footer_menu
          display: flex
@@ -408,11 +408,11 @@ footer
       width: 25%
 
       .register
-         font-size: calc(11px + 2 * ((100vw - 320px) / (1440 - 320)))
+         font-size: calc(13px + 1 * ((100vw - 320px) / (1440 - 320)))
          color: $bottomColorLightGrey
 
       .register_main
-         padding: 2rem 0
+         padding: 2em 0
 
    .footer-bottom
       display: flex
@@ -428,14 +428,21 @@ footer
             width: 100%
             height: auto
 
-      .footer-bottom_solials
+      .footer-bottom_socials
          display: flex
          align-items: center
+         padding-bottom: 2rem
 
          .privacy
-            color: $bottomColorLightGrey
-            font-size: calc(10px + 3 * ((100vw - 320px) / (1440 - 320)))
-            padding-right: 2rem
+            a
+               color: $bottomColorLightGrey
+               font-size: calc(13px + 1 * ((100vw - 320px) / (1440 - 320)))
+               padding-right: 2rem
+               text-decoration: none
+
+               &:hover
+                  color: $primaryColorOrange
+                  @include transition
 
          .icons
             i
@@ -557,28 +564,42 @@ footer
                display: flex;
                justify-content: space-around;
                padding-bottom: 5rem
-            
+
          .footer_menu
-            .list
-               .desktop
-                  display: none
+            display: none   
 
-            .footer_mob_menu
-               display: flex
+         .footer_mob_menu
+            display: flex
+            justify-content: space-around
+            width: 100%
 
-               .dropdown
-                  .btn
-                     width: 8em
-                     padding: .5em 0
+            .dropdown-menu
+               background-color: $primaryColorOrange
+               border-color: $primaryColorOrange
 
-                  .dropdown-menu
-                     font-size: 12px
-                     
+               .dropdown-item
+                  font-size: calc(12px + 2 * ((100vw - 320px) / (1440 - 320)))
+                  color: $primaryColorWhite
 
       .footer_copyright
          width: 100%
          text-align: center
 
+         .register_main
+            padding-top: 5rem
+
+      .footer-bottom
+         .footer-bottom_img-container
+            width: 40%
+
+         .footer-bottom_socials
+            .privacy
+               font-size: 14px
+
+            .icons
+               i
+                  font-size: 30px
+                  padding-right: 2rem
 @media (max-width: 575.98px)
    .container
       width: 90%
@@ -594,6 +615,13 @@ footer
       .subtitle
          width: 90%
 
+   footer
+      .footer-bottom
+         .footer-bottom_socials
+            flex-direction: column
+
+            .icons
+               padding-top: 2em
 @media (max-width: 479.98px)
    .services
       .flex_container-1,
@@ -606,3 +634,10 @@ footer
          .newsletter_form
             form
                width: 25rem
+
+   footer
+      .footer-bottom
+         justify-content: center
+
+         .footer-bottom_img-container
+            display: none

@@ -42,6 +42,20 @@ $bottomColorLightGrey: #cbc8c8
       color: $primaryColorOrange
       @include transition
 
+.dropdown-btn
+   font-weight: 500
+   font-size: calc(13px + 1 * ((100vw - 320px) / (1440 - 320)))
+   text-decoration: none
+   color: $primaryColorOrange
+   border: 1px solid $primaryColorOrange
+   border-radius: 30px;
+   padding: .5em 1em;
+
+   &:focus,
+   &:hover
+      color: $primaryColorWhite
+      background-color: $primaryColorOrange
+   
 // MEDIA QUERIES
 @media (max-width: 1199.98px) 
    .button-container
