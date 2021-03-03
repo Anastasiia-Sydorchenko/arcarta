@@ -6,10 +6,10 @@ $secondaryColor: #f9a38f
 $bottomColorLightGrey: #cbc8c8
 
 // IMPORT SECTION
-@import "node_modules/bootstrap/scss/bootstrap"; //add Bootstrap (full)
+@import "node_modules/bootstrap/scss/bootstrap" //add Bootstrap (full)
 
 // MIXINS
-@mixin transition 
+@mixin transition
    -webkit-transition: all 0.35s ease
    transition: all 0.35s ease
 
@@ -18,7 +18,7 @@ $bottomColorLightGrey: #cbc8c8
    background-color: $secondaryColor
    color: $primaryColorWhite
    padding: .5em 1em
-   border-radius: 20px
+   border-radius: 1.5em
    font-weight: 700
    font-size: calc(12px + 1 * ((100vw - 320px) / (1440 - 320)))
    width: auto
@@ -32,9 +32,9 @@ $bottomColorLightGrey: #cbc8c8
    font-weight: 700
    font-size: calc(11px + 3 * ((100vw - 320px) / (1440 - 320)))
    border: 2px solid $primaryColorOrange
-   border-radius: 30px
    background-color: $primaryColorOrange
-   padding: 1em 2.5em
+   border-radius: 2em
+   padding: .8em 2.5em
 
    &:hover
       border: 2px solid $primaryColorOrange
@@ -44,20 +44,20 @@ $bottomColorLightGrey: #cbc8c8
 
 .dropdown-btn
    font-weight: 500
-   font-size: calc(13px + 1 * ((100vw - 320px) / (1440 - 320)))
+   font-size: calc(14px + 2 * ((100vw - 320px) / (1440 - 320)))
    text-decoration: none
    color: $primaryColorOrange
    border: 1px solid $primaryColorOrange
-   border-radius: 30px;
-   padding: .5em 1em;
+   border-radius: 1.5em
+   padding: .5em 1em
 
    &:focus,
    &:hover
       color: $primaryColorWhite
       background-color: $primaryColorOrange
-   
+
 // MEDIA QUERIES
-@media (max-width: 1199.98px) 
+@media (max-width: 1199.98px)
    .button-container
       .btn
          padding: .5em 1.5em
