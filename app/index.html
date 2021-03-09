@@ -5,34 +5,28 @@
 
    <meta charset="utf-8">
    <!-- <base href="/"> -->
-
    <title>Arcarta</title>
    <meta name="description" content="">
-
    <meta name="viewport" content="width=device-width">
-
    <link rel="preconnect" href="https://fonts.gstatic.com">
-
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
    <link rel="icon" href="images/favicon.png">
    <meta property="og:image" content="images/dist/preview.jpg">
-
    <link rel="stylesheet" href="css/main.min.css">
-
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="container">  <!-- Контейнер должен быть для каждого блока, для которого он нужен. Могут быть блоки на всю ширину экрана -->
 
    <!-- TOP SECTION -->
    <div class="top-section">
       <header class="row flex-row align-items-baseline justify-content-between">
-
-         <div class="logo col col-xl-2">
+         
+         <!-- <a href="#" class='logo col col-xl-2'><img src="./images/dist/logo.png" alt="Arcarta logo"></a> -->
+         <div class="logo col col-xl-2"> <!--  Лого должно быть ссылкой  -->
             <img src="./images/dist/logo.png" alt="Arcarta logo">
          </div>
    
@@ -51,11 +45,29 @@
          <div class="button-container d-flex col col-xl-2">
             <button class="btn btn-top">Get Started</button>
          </div>
-   
-         <!--#include virtual="/parts/burger_menu.html" -->
+         <!-- Бургер вылазит из контейнера. Посмотри в консоли разработчика -->
+          <!--#include virtual="/parts/burger_menu.html" -->
    
       </header>
    
+      <!-- Нет смысла делать для каждого элемента свой row и внутрь его ложить сам элемент -->
+      <!-- Можно сделать общий row и туда уже складывать все без лишних оберток -->
+      <!-- Например -->
+      <!-- И header-info даешь display: flex; flex-direction: column; align-items: center; в стилях и блок у тебя по центру -->
+
+      <!-- <div class="header-info">
+         <div class="label-header">
+           <span>New</span>
+           <button class="report">The Art Market Report</button>
+         </div>
+         <h1 class="title">Rely on us</h1>
+         <p class="text-header">Our Customer Due Diligence platform helps you avoid fines or losing clients due to AML while protecting
+            you from cybercrime.</p>
+         <div class="btn btn-orange">Learn More</div>
+      </div> -->
+
+
+      
       <div class="top-content d-flex flex-column align-items-center">
          <div class="row label">
             <div class="new_element">New</div>
@@ -136,6 +148,18 @@
    <!-- SERVICES -->
    <div class="services">
       <div class="flex_container-1">
+
+         <!-- Тоже что и в хедере.  -->
+         
+         <!-- <div class="item">
+            <div class="item__img-container">
+               <img src="" alt="">
+            </div>
+            <h3 class="item__title"></h3>
+            <div class="item__info"></div>
+            <a href="#" class="item__btn"></a>
+         </div> -->
+
          <div class="item">
             <div class="item_img_container">
                <img src="./images/dist/item-1.png" alt="art gallery">
@@ -149,8 +173,9 @@
                <span>Galleries and independent art dealers</span>
             </div>
 
+            <!-- Тут ссылка, а не кнопка. Кнопку нужно делать тогда, когда он будет что-то открывать, отправлять или считать.  -->
             <div class="item_btn">
-               <button>Learn more</button>
+               <button>Learn more</button>  
             </div>
          </div>
 
@@ -315,28 +340,28 @@
 
       <div class="quiz_begin">
          <div class="num">01</div>
-         <div class="quiz_begin_icon">
+         <div class="quiz_begin_icon">         
             <img src="./images/dist/quiz_icon.png" alt="laptop">
          </div>
-         <div class="quiz_begin_title">
+         <div class="quiz_begin_title"> <!-- Лишняя обертка -->
             <h4>Compliance Quiz</h4>
          </div>
-         <div class="quiz_begin_btn">
+         <div class="quiz_begin_btn"> <!-- Лишняя обертка -->
             <button>Begin<i class="fas fa-arrow-right"></i></button>
          </div>
       </div>
 
       <div class="quiz_info">
-         <div class="new_element">
+         <div class="new_element"> <!-- Такие вещи в span лучше оборачивать -->
             New
          </div>
-         <div class="quiz_info_title">
+         <div class="quiz_info_title"> <!-- Лишняя обертка -->
             <h2>Does Anti-money Laundering affect you?</h2>
          </div>
-         <div class="quiz_info_subtitle">
-            <span>A short, interactive quiz to check if your art business is affected by 5AMLD regulation.</span>
+         <div class="quiz_info_subtitle"> <!-- Лишняя обертка -->
+            <span>A short, interactive quiz to check if your art business is affected by 5AMLD regulation.</span> <!-- Это параграф -->
          </div>
-         <div class="quiz_info_btn">
+         <div class="quiz_info_btn"> <!-- Лишняя обертка -->
             <button>Take the Quiz</button>
          </div>
       </div>
