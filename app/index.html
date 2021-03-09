@@ -42,8 +42,7 @@
                <div class="button-container d-flex col col-xl-2">
                   <button class="btn btn-top">Get Started</button>
                </div>
-               <!-- Бургер вылазит из контейнера. Посмотри в консоли разработчика -->
-                <!--#include virtual="/parts/burger_menu.html" -->
+               <!--#include virtual="/parts/burger_menu.html" -->
          
          </header>
       
@@ -55,7 +54,7 @@
                <h1>Rely on us</h1>
                <p class="subtitle">Our Customer Due Diligence platform helps you avoid fines or losing clients due to AML while protecting
                   you from cybercrime.</p>
-               <div class="btn btn-orange">Learn More</div>
+               <a class="btn btn-orange">Learn More</a>
       
                <div class="clients">
                   <div class="clients-item">
@@ -122,17 +121,6 @@
    <div class="container">
       <div class="services">
          <div class="flex_container-1">
-
-            <!-- Тоже что и в хедере.  -->
-            
-            <!-- <div class="item">
-               <div class="item__img-container">
-                  <img src="" alt="">
-               </div>
-               <h3 class="item__title"></h3>
-               <div class="item__info"></div>
-               <a href="#" class="item__btn"></a>
-            </div> -->
    
             <div class="item">
                <div class="item_img_container">
@@ -195,7 +183,7 @@
       </div>
    </div>
 
-
+   <!-- SERVICES MOBILE -->
    <div class="container">
       <div class="services__mobile">
          <div id="carousel_services" class="d-block d-md-none carousel slide" data-bs-ride="carousel">
@@ -284,31 +272,19 @@
    <div class="container">
       <div class="quiz">
          <div class="quiz_begin">
-               <div class="num">01</div>
-               <div class="quiz_begin_icon">         
-                  <img src="./images/dist/quiz_icon.png" alt="laptop">
-               </div>
-               <div class="quiz_begin_title"> <!-- Лишняя обертка -->
-                  <h4>Compliance Quiz</h4>
-               </div>
-               <div class="quiz_begin_btn"> <!-- Лишняя обертка -->
-                  <button>Begin<i class="fas fa-arrow-right"></i></button>
-               </div>
+            <div class="num">01</div>
+            <div class="quiz_begin_icon">         
+               <img src="./images/dist/quiz_icon.png" alt="laptop">
+            </div>
+            <h4 class="quiz_begin_title">Compliance Quiz</h4>
+            <button class="quiz_begin_btn">Begin<i class="fas fa-arrow-right"></i></button>
          </div>
    
          <div class="quiz_info">
-               <div class="new_element"> <!-- Такие вещи в span лучше оборачивать -->
-                  New
-               </div>
-               <div class="quiz_info_title"> <!-- Лишняя обертка -->
-                  <h2>Does Anti-money Laundering affect you?</h2>
-               </div>
-               <div class="quiz_info_subtitle"> <!-- Лишняя обертка -->
-                  <span>A short, interactive quiz to check if your art business is affected by 5AMLD regulation.</span> <!-- Это параграф -->
-               </div>
-               <div class="quiz_info_btn"> <!-- Лишняя обертка -->
-                  <button>Take the Quiz</button>
-               </div>
+            <span class="new_element">New</span>
+            <h2 class="quiz_info_title">Does Anti-money Laundering affect you?</h2>
+            <p class="quiz_info_subtitle">A short, interactive quiz to check if your art business is affected by 5AMLD regulation.</p> <!-- Это параграф -->
+            <button class="quiz_info_btn">Take the Quiz</button>
          </div>
       </div>   
    </div>
@@ -321,14 +297,8 @@
          </div>
    
          <div class="newsletter_info">
-   
-            <div class="newsletter_title">
-               <h3>Art world insight.</h3>
-            </div>
-   
-            <div class="newsletter_subtitle">
-               <span>Receive our newsletter direct to your inbox to follow updates to legislation and the EU art-market's response.</span>
-            </div>
+            <h3 class="newsletter_title">Art world insight.</h3>
+            <p class="newsletter_subtitle">Receive our newsletter direct to your inbox to follow updates to legislation and the EU art-market's response.</p>
    
             <div class="newsletter_form">
                <form action="#" method="#">
@@ -336,39 +306,40 @@
                   <button type="submit" id="button"><i class="fas fa-arrow-circle-right"></i></button>
                </form>
             </div>
+
          </div>
       </div>
    </div>
 
-
+   <!-- FOOTER -->
    <div class="container">
       <footer>
-   
+
          <div class="footer-top">
       
             <div class="footer_info">
                <div class="footer_logo-container">
-                  <img src="./images/dist/logo.png" alt="Arcarta logo">
+                  <a href="#">
+                     <img src="./images/dist/logo.png" alt="Arcarta logo"></a>
+                  </a>    
                </div>
-               <div class="text">
-                  <p>Our Customer Due Diligence platform helps you avoid fines or losing clients due to AML while protecting
-                     you from cybercrime.</p>
-               </div>
+               <p class="text">Our Customer Due Diligence platform helps you avoid fines or losing clients due to AML while protecting
+               you from cybercrime.</p>
    
                <div class="partners">
                   <div class="bada">
-                     <div class="partner_name">
+                     <span class="partner_name">
                         Approved Service Provider
-                     </div>
+                     </span>
                      <div class="partner_img-container">
                         <img src="./images/dist/bada_service-provider.png" alt="Bada">
                      </div>
                   </div>
                   
                   <div class="law">
-                     <div class="partner_name">
+                     <span class="partner_name">
                         In Partnership with
-                     </div>
+                     </span>
                      <div class="partner_img-container">
                         <img src="./images/dist/law_partner.png" alt="LAW">
                      </div>
@@ -421,7 +392,7 @@
                   </ul>
    
                </div>
-   
+
             </div>
    
             <div class="footer_mob_menu d-md-none">
@@ -481,10 +452,10 @@
          </div>
    
          <div class="footer_copyright">
-            <div class="register register_main">Registered with the Information Commissioner's Office (ICO) Registration number: ZA679248
-            </div>
+            <p class="register register_main">Registered with the Information Commissioner's Office (ICO) Registration number: ZA679248
+            </p>
    
-            <div class="register">© Arc-Pay Ltd 2021</div>
+            <p class="register">© Arc-Pay Ltd 2021</p>
          </div>
       
          <div class="footer-bottom">
@@ -494,7 +465,7 @@
             </div>
             
             <div class="footer-bottom_socials">
-               <div class="privacy"> <a href="#">Privacy & Terms</a></div>
+               <div class="privacy"><a href="#">Privacy & Terms</a></div>
                <div class="icons">
                   <a href="https://twitter.com/" target="blank" rel="noopener"><i class="fab fa-twitter"></i></a>
                   <a href="https://instagram.com/" target="blank" rel="noopener"><i class="fab fa-instagram"></i></a>
@@ -505,7 +476,6 @@
          </div>
       </footer>
    </div>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
